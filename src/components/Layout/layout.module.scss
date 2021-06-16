@@ -1,0 +1,47 @@
+.outer-container {
+	position: absolute;
+	display: grid;
+	min-height: 100vh;
+	min-width: 100vw;
+}
+
+.inner-container {
+	display: grid;
+	grid-area: inner;
+	background-color: #1d1d1d;
+	min-width: auto;
+	color: white;
+}
+
+@media (min-width: 1281px),
+	(min-width: 1025px) and (max-width: 1280px),
+	(min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+	.outer-container {
+		grid-template-areas: 'nav inner' 'nav footer';
+		grid-template-columns: 10rem auto;
+		grid-template-rows: auto max-content;
+	}
+}
+
+@media (min-width: 700px) and (max-width: 1024px),
+	(min-width: 0px) and (max-width: 699px) {
+	.outer-container {
+		grid-template-areas: 'nav' 'inner' 'footer';
+		grid-template-columns: auto max-content;
+		grid-template-rows: max-content 1fr auto;
+	}
+}
+
+@media (min-width: 0px) and (max-width: 699px) and (orientation: landscape) {
+	.outer-container {
+		background-image: url('../../assets/img/rotate.jpg');
+		background-color: #212121;
+		background-size: contain;
+		background-attachment: fixed;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+	.inner-container {
+		display: none;
+	}
+}

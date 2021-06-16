@@ -1,0 +1,21 @@
+.indexContainer {
+	margin-top: 2%;
+
+	img {
+		border: solid 2px #787878;
+		position: absolute;
+		top: 6%;
+		right: 6%;
+		width: 30%;
+	}
+
+	@media (min-width: 481px) and (max-width: 1024px) {
+		img {
+			display: none;
+		}
+	}
+
+	@media (min-width: 0px) and (max-width: 699px) and (orientation: landscape) {
+		display: none;
+	}
+}
