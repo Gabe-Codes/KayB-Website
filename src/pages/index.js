@@ -7,7 +7,7 @@ const Index = () => {
 		<Layout>
 			<main>
 				<div className={styles.indexContainer}>
-					<h1>Sierra Pogchamp</h1>
+					<h1 className={styles.header}>Sierra Pogchamp</h1>
 				</div>
 			</main>
 		</Layout>

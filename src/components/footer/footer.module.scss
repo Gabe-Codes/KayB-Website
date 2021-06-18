@@ -5,18 +5,56 @@
 	}
 
 	@media (min-width: 280px) and (max-width: 1024px) {
-		font-family: 'Baloo Tamma 2', cursive;
 		display: grid;
-		place-content: center;
-		text-align: center;
-		background-color: #1d1d1d;
-		color: white;
 		grid-area: footer;
 
+		.footerContent {
+			font-family: 'Baloo Tamma 2', cursive;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;
+			text-align: center;
+			background-color: #f7f9f7;
+			color: #141414;
+		}
+
+		.imgWrapper {
+			background-color: #f7f9f7;
+			width: 5vw;
+			margin: auto 0;
+		}
+
+		img {
+			width: 100%;
+			border-radius: 20%;
+			margin: 0;
+		}
+
 		p {
-			margin: 0 auto;
+			margin: auto 0;
 			font-weight: 550;
-			font-size: 1rem;
+			font-size: 3vw;
+		}
+
+		section {
+			display: flex;
+			align-items: center;
+			justify-content: space-evenly;
+			flex-direction: row;
+			margin: 1vh 0;
+
+			a {
+				text-decoration: none;
+			}
+
+			.twitter {
+				color: #1fa1ef;
+				padding-right: 1rem;
+			}
+
+			.twitch {
+				color: #9048fb;
+			}
 		}
 	}
 

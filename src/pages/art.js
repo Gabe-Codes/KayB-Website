@@ -6,16 +6,7 @@ import ReactFullpage from '@fullpage/react-fullpage';
 const SEL = 'custom-section';
 const SECTION_SEL = `.${SEL}`;
 
-const originalColors = [
-	'#ff5f45',
-	'#0798ec',
-	'#fc6c7c',
-	'#435b71',
-	'orange',
-	'blue',
-	'purple',
-	'yellow',
-];
+const originalColors = ['#cec0e7', '#a480d7', '#5000b8', '#3b0086'];
 
 class Art extends React.Component {
 	constructor(props) {

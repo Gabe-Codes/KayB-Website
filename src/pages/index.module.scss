@@ -1,12 +1,8 @@
 .indexContainer {
 	margin-top: 2%;
 
-	img {
-		border: solid 2px #787878;
-		position: absolute;
-		top: 6%;
-		right: 6%;
-		width: 30%;
+	.header {
+		color: #141414;
 	}
 
 	@media (min-width: 481px) and (max-width: 1024px) {

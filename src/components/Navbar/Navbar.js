@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import * as styles from './navbar.module.scss';
-import logo from '../../assets/img/ZeroNoon.png';
+import logo from '../../assets/img/kayblogo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter, faTwitch } from '@fortawesome/free-brands-svg-icons';
 

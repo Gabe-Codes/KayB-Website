@@ -12,6 +12,7 @@
 		right: 6%;
 
 		img {
+			border: solid 2px #26252d;
 			border-radius: 10%;
 			height: 70vh;
 		}
@@ -25,12 +26,13 @@
 
 	.header {
 		font-size: 3.5rem;
+		color: #141414;
 	}
 
 	.description {
 		font-size: 1rem;
 		width: 40%;
-		color: #787878;
+		color: #26252d;
 	}
 
 	@media (min-width: 280px) and (max-width: 1023px) {
