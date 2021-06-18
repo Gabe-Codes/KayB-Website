@@ -10,7 +10,6 @@ const Commissions = () => {
 					<iframe
 						className={styles.comForm}
 						src="https://docs.google.com/forms/d/e/1FAIpQLSfxzboaGZ9BYTriSF7tIrn7gggFiYHoGtAURUT9MjUj-aBcVg/viewform"
-						sandbox=""
 					></iframe>
 				</div>
 			</main>
