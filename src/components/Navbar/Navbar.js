@@ -7,33 +7,38 @@ import { faTwitter, faTwitch } from '@fortawesome/free-brands-svg-icons';
 
 const Navbar = () => {
 	return (
-		<nav className={styles.navbar}>
-			<div className={styles.imgWrapper}>
-				<img src={logo} alt="" />
+		<nav className={styles.navbar} id="navbar">
+			<div className={styles.navContent}>
+				<div className={styles.imgWrapper}>
+					<img src={logo} alt="" />
+				</div>
+				<input type="checkbox" id="nav-toggle" className={styles.check} />
+				<div className={styles.pages}>
+					<Link to="/">Home</Link>
+					<Link to="/about">About</Link>
+					<Link to="/art">Art</Link>
+					<Link to="/commissions">Commissions</Link>
+				</div>
+				<section>
+					<a
+						className={styles.twitter}
+						href="https://twitter.com/AstralKayB"
+						target="blank"
+					>
+						<FontAwesomeIcon size="2x" icon={faTwitter} />
+					</a>
+					<a
+						className={styles.twitch}
+						href="https://www.twitch.tv/lkayb"
+						target="blank"
+					>
+						<FontAwesomeIcon size="2x" icon={faTwitch} />
+					</a>
+				</section>
+				<p className={styles.footer}>
+					Copyright &copy; Sierra Hernandez {new Date().getFullYear()}
+				</p>
 			</div>
-			<input type="checkbox" id="nav-toggle" className={styles.check} />
-			<div className={styles.pages}>
-				<Link to="/">Home</Link>
-				<Link to="/about">About</Link>
-				<Link to="/art">Art</Link>
-				<Link to="/commissions">Commissions</Link>
-			</div>
-			<section>
-				<a
-					className={styles.twitter}
-					href="https://twitter.com/AstralKayB"
-					target="blank"
-				>
-					<FontAwesomeIcon size="2x" icon={faTwitter} />
-				</a>
-				<a
-					className={styles.twitch}
-					href="https://www.twitch.tv/lkayb"
-					target="blank"
-				>
-					<FontAwesomeIcon size="2x" icon={faTwitch} />
-				</a>
-			</section>
 		</nav>
 	);
 };

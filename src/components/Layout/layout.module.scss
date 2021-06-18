@@ -17,7 +17,7 @@
 	(min-width: 1025px) and (max-width: 1280px),
 	(min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
 	.outer-container {
-		grid-template-areas: 'nav inner' 'nav footer';
+		grid-template-areas: 'nav inner';
 		grid-template-columns: 10rem auto;
 		grid-template-rows: auto max-content;
 	}

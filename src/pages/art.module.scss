@@ -1,3 +1,27 @@
 .artContainer {
-	margin-top: 10%;
+	display: grid;
+	height: 100%;
+	width: 100%;
+
+	grid-template-areas: 'header' 'content';
+	grid-template-columns: auto;
+	grid-template-rows: 10vh max-content;
+
+	.artHeader {
+		display: grid;
+		grid-area: header;
+		margin: 0 auto;
+	}
+
+	.artContent {
+		display: grid;
+		grid-area: content;
+		margin: auto 0;
+	}
+
+	@media (min-width: 280px) and (max-width: 1024px) {
+		grid-template-areas: 'navbar' 'header' 'content';
+		grid-template-columns: auto;
+		grid-template-rows: 8vh 10vh max-content;
+	}
 }
