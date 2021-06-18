@@ -18,14 +18,14 @@ const Footer = () => {
 						href="https://twitter.com/AstralKayB"
 						target="blank"
 					>
-						<FontAwesomeIcon size="l" icon={faTwitter} />
+						<FontAwesomeIcon size="lg" icon={faTwitter} />
 					</a>
 					<a
 						className={styles.twitch}
 						href="https://www.twitch.tv/lkayb"
 						target="blank"
 					>
-						<FontAwesomeIcon size="l" icon={faTwitch} />
+						<FontAwesomeIcon size="lg" icon={faTwitch} />
 					</a>
 				</section>
 			</div>

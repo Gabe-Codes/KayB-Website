@@ -25,5 +25,27 @@ module.exports = {
 			},
 			__key: 'images',
 		},
+		{
+			resolve: 'gatsby-source-filesystem',
+			options: {
+				path: `${__dirname}/src/assets/art-page/emotes`,
+				name: 'emotes',
+			},
+			resolve: 'gatsby-source-filesystem',
+			options: {
+				path: `${__dirname}/src/assets/art-page/character-art`,
+				name: 'character-art',
+			},
+			resolve: 'gatsby-source-filesystem',
+			options: {
+				path: `${__dirname}/src/assets/art-page/apparel-designs`,
+				name: 'apparel-designs',
+			},
+			resolve: 'gatsby-source-filesystem',
+			options: {
+				path: `${__dirname}/src/assets/art-page/misc-art`,
+				name: 'misc-art',
+			},
+		},
 	],
 };

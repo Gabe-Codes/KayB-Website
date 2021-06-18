@@ -8,6 +8,7 @@ const Commissions = () => {
 			<main>
 				<div className={styles.comContainer}>
 					<iframe
+						title="Commissions Form"
 						className={styles.comForm}
 						src="https://docs.google.com/forms/d/e/1FAIpQLSfxzboaGZ9BYTriSF7tIrn7gggFiYHoGtAURUT9MjUj-aBcVg/viewform"
 					></iframe>

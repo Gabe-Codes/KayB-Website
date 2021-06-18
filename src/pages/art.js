@@ -2,6 +2,7 @@ import React from 'react';
 import Layout from '../components/Layout/Layout';
 import * as styles from './art.module.scss';
 import ReactFullpage from '@fullpage/react-fullpage';
+import QueriedImages from '../components/Functions/ImageQuery';
 
 const SEL = 'custom-section';
 const SECTION_SEL = `.${SEL}`;
@@ -15,16 +16,28 @@ class Art extends React.Component {
 			sectionsColor: [...originalColors],
 			fullpages: [
 				{
-					text: 'Emotes',
+					pageInfo: {
+						header: 'Emotes',
+						folder: 'emotes',
+					},
 				},
 				{
-					text: 'Character Art',
+					pageInfo: {
+						header: 'Character Art',
+						folder: 'character-art',
+					},
 				},
 				{
-					text: 'Apparel Designs',
+					pageInfo: {
+						header: 'Apparel Designs',
+						folder: 'apparel-designs',
+					},
 				},
 				{
-					text: 'Miscellaneous',
+					pageInfo: {
+						header: 'Miscellaneous',
+						folder: 'misc-art',
+					},
 				},
 			],
 		};
@@ -32,7 +45,6 @@ class Art extends React.Component {
 
 	render() {
 		const { fullpages } = this.state;
-
 		return (
 			<Layout>
 				<main>
@@ -51,50 +63,14 @@ class Art extends React.Component {
 						sectionsColor={this.state.sectionsColor}
 						render={(comp) => (
 							<ReactFullpage.Wrapper>
-								{fullpages.map(({ text }) => (
-									<div key={text} className={SEL}>
+								{fullpages.map(({ pageInfo }) => (
+									<div key={pageInfo.folder} className={SEL}>
 										<div className={styles.artContainer}>
-											<h1 className={styles.artHeader}>{text}</h1>
-											<div className={styles.artContent}>Content</div>
+											<h1 className={styles.artHeader}>{pageInfo.header}</h1>
+											<QueriedImages folder={pageInfo.folder} />
 										</div>
 									</div>
 								))}
-								{/* <div key="Emotes" className={SEL}>
-									<div className={styles.artContainer}>
-										<h1 className={styles.artHeader}>Emotes</h1>
-										<div className={styles.artContent}>
-											<div className="section">
-												<div className="slide" data-anchor="slide1">
-													<h3>Slide 2.1</h3>
-												</div>
-												<div className="slide" data-anchor="slide2">
-													<h3>Slide 2.2</h3>
-												</div>
-												<div className="slide" data-anchor="slide3">
-													<h3>Slide 2.3</h3>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div key="Character Art" className={SEL}>
-									<div className={styles.artContainer}>
-										<h1 className={styles.artHeader}>Character Art</h1>
-										<div className={styles.artContent}>Content</div>
-									</div>
-								</div>
-								<div key="Apparel Designs" className={SEL}>
-									<div className={styles.artContainer}>
-										<h1 className={styles.artHeader}>Apparel Designs</h1>
-										<div className={styles.artContent}>Content</div>
-									</div>
-								</div>
-								<div key="Miscellaneous" className={SEL}>
-									<div className={styles.artContainer}>
-										<h1 className={styles.artHeader}>Miscellaneous</h1>
-										<div className={styles.artContent}>Content</div>
-									</div>
-								</div> */}
 							</ReactFullpage.Wrapper>
 						)}
 					/>
