@@ -4,7 +4,6 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 const QueriedImages = (props) => {
 	const folderSelector = (folder, data) => {
-		console.log(data);
 		switch (folder) {
 			case 'emotes':
 				return data.data.emotes;

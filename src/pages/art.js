@@ -51,12 +51,12 @@ class Art extends React.Component {
 					<ReactFullpage
 						debug
 						navigation
-						anchors={[
-							'emotes',
-							'character-art',
-							'apparel-designs',
-							'miscellaneous',
-						]}
+						// anchors={[
+						// 	'emotes',
+						// 	'character-art',
+						// 	'apparel-designs',
+						// 	'miscellaneous',
+						// ]}
 						continuousVertical={true}
 						fixedElements={'#navbar'}
 						sectionSelector={SECTION_SEL}
