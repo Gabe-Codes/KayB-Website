@@ -28,23 +28,29 @@ module.exports = {
 		{
 			resolve: 'gatsby-source-filesystem',
 			options: {
-				path: `${__dirname}/src/assets/art-page/emotes`,
 				name: 'emotes',
+				path: `${__dirname}/src/assets/art-page/emotes`,
 			},
+		},
+		{
 			resolve: 'gatsby-source-filesystem',
 			options: {
-				path: `${__dirname}/src/assets/art-page/character-art`,
-				name: 'character-art',
+				name: 'characterArt',
+				path: `${__dirname}/src/assets/art-page/characterArt`,
 			},
+		},
+		{
 			resolve: 'gatsby-source-filesystem',
 			options: {
-				path: `${__dirname}/src/assets/art-page/apparel-designs`,
-				name: 'apparel-designs',
+				name: 'apparelDesigns',
+				path: `${__dirname}/src/assets/art-page/apparelDesigns`,
 			},
+		},
+		{
 			resolve: 'gatsby-source-filesystem',
 			options: {
-				path: `${__dirname}/src/assets/art-page/misc-art`,
-				name: 'misc-art',
+				name: 'miscArt',
+				path: `${__dirname}/src/assets/art-page/miscArt`,
 			},
 		},
 	],

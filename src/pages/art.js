@@ -24,19 +24,19 @@ class Art extends React.Component {
 				{
 					pageInfo: {
 						header: 'Character Art',
-						folder: 'character-art',
+						folder: 'characterArt',
 					},
 				},
 				{
 					pageInfo: {
 						header: 'Apparel Designs',
-						folder: 'apparel-designs',
+						folder: 'apparelDesigns',
 					},
 				},
 				{
 					pageInfo: {
 						header: 'Miscellaneous',
-						folder: 'misc-art',
+						folder: 'miscArt',
 					},
 				},
 			],
