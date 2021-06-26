@@ -1,8 +1,61 @@
-.artImageContainer {
-	width: 40vw;
+.artWideSmall,
+.artWideMedium,
+.artWideLarge,
+.artTallSmall,
+.artTallMedium,
+.artTallLarge {
 	margin-bottom: 5%;
-
 	.artImage {
-		width: 100%;
+		margin: 0 auto;
+	}
+}
+
+.artWideSmall {
+	width: 20vw;
+}
+
+.artWideMedium {
+	width: 40vw;
+}
+
+.artWideLarge {
+	width: 40vw;
+}
+
+.artTallSmall {
+	width: 20vw;
+}
+
+.artTallMedium {
+	width: 30vw;
+}
+
+.artTallLarge {
+	width: 10vw;
+}
+
+@media (min-width: 280px) and (max-width: 1024px) {
+	.artWideSmall {
+		width: 70vw;
+	}
+
+	.artWideMedium {
+		width: 80vw;
+	}
+
+	.artWideLarge {
+		width: 80vw;
+	}
+
+	.artTallSmall {
+		width: 70vw;
+	}
+
+	.artTallMedium {
+		width: 30vw;
+	}
+
+	.artTallLarge {
+		width: 10vw;
 	}
 }

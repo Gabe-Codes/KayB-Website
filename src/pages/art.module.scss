@@ -10,14 +10,20 @@
 	.artHeader {
 		display: grid;
 		grid-area: header;
+
 		margin: 0 auto;
 	}
 
-	.artContent {
-		display: flex;
-		flex-flow: row wrap;
-		justify-content: space-evenly;
-		align-content: flex-start;
+	.artContentContainer {
+		display: grid;
+		grid-area: content;
+
+		.artContent {
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: space-evenly;
+			align-content: flex-start;
+		}
 	}
 
 	@media (min-width: 280px) and (max-width: 1024px) {

@@ -6,6 +6,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter, faTwitch } from '@fortawesome/free-brands-svg-icons';
 
 const Navbar = () => {
+	const refreshPage = () => {
+		setTimeout(() => {
+			window.location.reload(false);
+		}, 500);
+	};
+
 	return (
 		<nav className={styles.navbar} id="navbar">
 			<div className={styles.navContent}>
@@ -16,7 +22,9 @@ const Navbar = () => {
 				<div className={styles.pages}>
 					<Link to="/">Home</Link>
 					<Link to="/about">About</Link>
-					<Link to="/art">Art</Link>
+					<Link to="/art" onClick={refreshPage}>
+						Art
+					</Link>
 					<Link to="/commissions">Commissions</Link>
 				</div>
 				<section>

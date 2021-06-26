@@ -19,13 +19,22 @@ const QueriedImages = (props) => {
 		}
 	};
 
+	const sizeSelector = (width, height) => {
+		const ratio = width >= height ? 'artWide' : 'artTall';
+
+		if (width <= 300) return styles[ratio + 'Small'];
+		else if (width <= 900) return styles[ratio + 'Medium'];
+		else return styles[ratio + 'Large'];
+	};
+
 	const Images = ({ data }) => (
 		<>
 			{folderSelector(props.folder, data).edges.map((edge) => {
 				let image = getImage(edge.node);
+				console.log(image);
 				return (
 					<GatsbyImage
-						className={styles.artImageContainer}
+						className={sizeSelector(image.width, image.height)}
 						imgClassName={styles.artImage}
 						image={image}
 						alt=""
@@ -48,7 +57,7 @@ const QueriedImages = (props) => {
 						edges {
 							node {
 								childImageSharp {
-									gatsbyImageData(layout: CONSTRAINED)
+									gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
 								}
 							}
 						}
@@ -63,7 +72,7 @@ const QueriedImages = (props) => {
 						edges {
 							node {
 								childImageSharp {
-									gatsbyImageData(width: 300)
+									gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
 								}
 							}
 						}
@@ -78,7 +87,7 @@ const QueriedImages = (props) => {
 						edges {
 							node {
 								childImageSharp {
-									gatsbyImageData(width: 300)
+									gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
 								}
 							}
 						}
@@ -93,7 +102,7 @@ const QueriedImages = (props) => {
 						edges {
 							node {
 								childImageSharp {
-									gatsbyImageData(width: 300)
+									gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
 								}
 							}
 						}
