@@ -19,6 +19,10 @@ const About = () => {
 							Beach and many more! I have also worked with many YouTubers and
 							Streamers with very well established brands. While on my site you
 							can see my work and learn more about my art. Enjoy!
+							<br />
+							<a className={styles.email} href="mailto:kayb.business@gmail.com?subject=Business Inquiry">
+								kayb.business@gmail.com
+							</a>
 						</p>
 					</div>
 					<div className={styles.image}>

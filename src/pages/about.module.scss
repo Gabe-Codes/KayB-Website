@@ -35,6 +35,15 @@
 		color: #26252d;
 	}
 
+	.email {
+		text-decoration: none;
+		color: #26252d;
+	}
+
+	.email:hover {
+		color: #6200b3;
+	}
+
 	@media (min-width: 280px) and (max-width: 1023px) {
 		.text {
 			text-align: center;

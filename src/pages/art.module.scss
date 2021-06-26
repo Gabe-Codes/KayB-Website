@@ -14,9 +14,10 @@
 	}
 
 	.artContent {
-		display: grid;
-		grid-area: content;
-		margin: auto 0;
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-evenly;
+		align-content: flex-start;
 	}
 
 	@media (min-width: 280px) and (max-width: 1024px) {

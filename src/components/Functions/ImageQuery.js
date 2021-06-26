@@ -1,6 +1,7 @@
 import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import * as styles from './imageQuery.module.scss';
 
 const QueriedImages = (props) => {
 	const folderSelector = (folder, data) => {
@@ -22,7 +23,14 @@ const QueriedImages = (props) => {
 		<>
 			{folderSelector(props.folder, data).edges.map((edge) => {
 				let image = getImage(edge.node);
-				return <GatsbyImage image={image} alt="" />;
+				return (
+					<GatsbyImage
+						className={styles.artImageContainer}
+						imgClassName={styles.artImage}
+						image={image}
+						alt=""
+					/>
+				);
 			})}
 		</>
 	);
@@ -40,7 +48,7 @@ const QueriedImages = (props) => {
 						edges {
 							node {
 								childImageSharp {
-									gatsbyImageData(width: 300)
+									gatsbyImageData(layout: CONSTRAINED)
 								}
 							}
 						}
